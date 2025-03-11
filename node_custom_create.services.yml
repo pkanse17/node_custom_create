@@ -1,0 +1,13 @@
+services:
+  node_custom_create.node_delete_event_subscriber:
+    class: Drupal\node_custom_create\EventSubscriber\NodeDeleteEventSubscriber
+    arguments: ['@logger.factory']
+    tags:
+      - { name: 'event_subscriber' }
+
+  # Define the custom logger channel.
+  node_custom_create.logger:
+    class: Drupal\Core\Logger\LoggerChannel
+    arguments: [ 'node_custom_create' ]
+    tags:
+      - { name: logger.channel }

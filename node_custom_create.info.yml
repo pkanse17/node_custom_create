@@ -1,0 +1,8 @@
+name: 'Node Custom Create'
+type: module
+description: 'A module to accept external POST data and create nodes.'
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
+dependencies:
+  - hook_event_dispatcher:hook_event_dispatcher
+  - core_event_dispatcher:core_event_dispatcher

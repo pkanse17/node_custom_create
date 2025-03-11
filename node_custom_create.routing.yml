@@ -1,0 +1,16 @@
+node_custom_create.create_node:
+  path: '/node-custom-create/create-node'
+  defaults:
+    _controller: '\Drupal\node_custom_create\Controller\NodeCustomCreateController::createNode'
+    _title: 'Create Node'
+  requirements:
+    _permission: 'access content'
+  methods: [POST]
+
+node_custom_create.config_form:
+  path: '/admin/config/node-custom-create'
+  defaults:
+    _form: '\Drupal\node_custom_create\Form\NodeCustomCreateConfigForm'
+    _title: 'Node Custom Create Configuration'
+  requirements:
+    _permission: 'administer site configuration'
