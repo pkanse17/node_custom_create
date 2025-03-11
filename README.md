@@ -6,11 +6,6 @@ This module allows external POST requests to create nodes of type `article` in D
 
 - **POST Endpoint**: `/node-custom-create/create-node`
 - **Authentication**: Bearer token authorization
-- **Fields**:
-  - `title`: Title of the node (required).
-  - `body`: Body text of the node (required).
-  - `tag`: A tag field for the node (required).
-  - `image_url`: Image URL for the node (required).
 
 ## Requirements
 
@@ -86,10 +81,4 @@ curl -X POST "http://your-drupal-site/node-custom-create/create-node" \
 This module includes an **Event Subscriber** that listens for node deletion
 events. Whenever a node is deleted, this subscriber performs actions like
 logging the event or cleaning up custom data.
-
-### Example Action
-
-In the event subscriber, you can customize the actions that occur when a
-node is deleted. For example, you can clean up any custom data associated
-with the node or notify an external system.
 
